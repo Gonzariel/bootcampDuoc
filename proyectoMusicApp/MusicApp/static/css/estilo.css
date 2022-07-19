@@ -1,0 +1,73 @@
+@import url(menu.css);
+@import url(carrusel.css);
+@import url(mapa.css);
+@import url(tabla.css);
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    position: fixed;
+    z-index: 100;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+
+.logo {
+    width:100px;
+    height: 100%;
+    float: left;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    padding: 10px;
+}
+footer .footer .row .col{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+footer .footer .row .col i{
+    font-size: 20px;
+    padding: 5px;
+}
+.desarrollo{
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.desarrollo div h6{
+    display: flex;
+    justify-content: center;
+}
+.desarrollo div p{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+@media(min-width:1024px){
+    
+    footer .footer .row .col i{
+        font-size: 50px;
+    }
+}
+

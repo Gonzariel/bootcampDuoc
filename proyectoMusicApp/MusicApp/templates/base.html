@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrienda tu cancha</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <script src="https://kit.fontawesome.com/bd7349ddcd.js" crossorigin="anonymous"></script>    
+    {% block css %}
+    
+    {% endblock css %}
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <a href="{% url 'INDEX' %}">
+                <img class="logo" src="{% static 'img/logo1.jpg' %}" alt="Logo">
+            </a>
+            <input type="checkbox" name="" id="menu-responsive">
+            <label for="menu-responsive"><i class="fa-solid fa-bars"></i></label>
+            <nav class="menu">
+                <a href="{% url 'INDEX' %}">Inicio</a>
+                <a>Galeria</a>            
+                <a>Registrar</a>
+                <a>Login</a>
+        </div>
+    </header>
+    <main>
+        <div id="contenido">
+
+            {% block contenido %}
+
+            {% endblock contenido %}
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="row contenedor">
+                <div class="col"><i class="fa-brands fa-facebook fa-fade"></i><i
+                        class="fa-brands fa-instagram-square fa-fade"></i><i class="fa-brands fa-youtube fa-fade"></i>
+                </div>
+                <div class="col">
+                    <h6>MusicApp Jhon Doe(CEO)</h6>
+                </div>
+                <div class="desarrollo">
+                    <div>
+                        <br>
+                        <h6>Desarrollado por:</h6>
+                        <p>Claudio</p>
+                        <p>Ariel</p>
+                        <h5>Copyright (c) 2022 Duoc UC</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% block js %}
+    
+    {% endblock js %}
+
+</body>
+
+</html>

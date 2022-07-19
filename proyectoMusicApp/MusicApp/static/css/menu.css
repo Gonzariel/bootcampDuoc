@@ -1,0 +1,60 @@
+#menu-responsive{
+    display: none;
+}
+
+header label {
+    float: right;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(49, 49, 49, 0.9);
+    transform: translateX(100%);
+    transition: 1.3s;
+}
+.menu a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-bottom: solid 1px rgb(49, 49, 49);
+}
+
+.menu a:hover {
+    background-color: rgba(92, 92, 92);
+}
+
+.dropdown-menu{
+    background-color: rgb(49, 49, 49);
+}
+
+#menu-responsive:checked ~ .menu{
+    transform: translateX(0%);
+}
+
+@media (min-width:1024px){    
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        float: right;
+        display: flex;
+        transform: translateX(0%);
+        text-decoration: none;
+    }
+    header label{
+        display: none;
+    }
+
+    .menu{
+        border: none;
+    }
+}
